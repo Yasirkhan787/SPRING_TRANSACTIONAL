@@ -1,0 +1,150 @@
+2026-09-23 11:48:05.897424+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]USER_CONTACTS"; expected "UPDATE"; SQL statement:
+USER_CONTACTS [42001-240]
+2026-09-23 12:05:04.065809+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS USERS [*]USER_CONTACTS USER_CONTACTS"; SQL statement:
+SELECT * FROM USERS USERS USER_CONTACTS USER_CONTACTS [42000-240]
+2026-09-23 12:06:46.659188+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]USER SET BALANCE = 1000.0 WHERE ID IN(1,2)"; expected "identifier"; SQL statement:
+UPDATE USER SET BALANCE = 1000.0 WHERE ID IN(1,2) [42001-240]
+2026-09-24 09:21:22.968000+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SHOW [*]VARIABLES LIKE 'transaction_isolation'"; SQL statement:
+SHOW VARIABLES LIKE 'transaction_isolation' [42000-240]
+2026-09-24 10:39:43.814341+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]USER SET BALANCE = '1000.0' WHERE ID = 1"; expected "identifier"; SQL statement:
+UPDATE USER SET BALANCE = '1000.0' WHERE ID = 1 [42001-240]
+2026-09-24 10:39:51.535201+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE [*]USER SET BALANCE =: '1000.0' WHERE ID = 1"; expected "identifier"; SQL statement:
+UPDATE USER SET BALANCE =: '1000.0' WHERE ID = 1 [42001-240]
+2026-09-24 10:40:03.831775+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE USERS SET BALANCE =[*]: '1000.0' WHERE ID = 1"; expected "DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+UPDATE USERS SET BALANCE =: '1000.0' WHERE ID = 1 [42001-240]
+2026-09-24 10:40:16.657644+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE USERS SET BALANCE =[*]: '1000.0' WHERE ID = '1'"; expected "DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+UPDATE USERS SET BALANCE =: '1000.0' WHERE ID = '1' [42001-240]
+2026-09-24 10:41:30.972596+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS \000d\000a\000d\000aUPDATE [*]USERS SET BALANCE = 1000.0 WHERE ID = '2'"; SQL statement:
+SELECT * FROM USERS 
+
+UPDATE USERS SET BALANCE = 1000.0 WHERE ID = '2' [42000-240]
+2026-09-24 10:41:35.524265+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS \000d\000a\000d\000aUPDATE [*]USERS SET BALANCE = 1000.0 WHERE ID = '2'"; SQL statement:
+SELECT * FROM USERS 
+
+UPDATE USERS SET BALANCE = 1000.0 WHERE ID = '2' [42000-240]
+2026-09-24 10:45:17.288747+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS \000d\000aUPDATE [*]USERS SET BALANCE = 1000.0 WHERE ID = '2'"; SQL statement:
+SELECT * FROM USERS 
+UPDATE USERS SET BALANCE = 1000.0 WHERE ID = '2' [42000-240]
+2026-09-24 10:45:20.000466+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS \000d\000aUPDATE [*]USERS SET BALANCE = 1000.0 WHERE ID = '2'"; SQL statement:
+SELECT * FROM USERS 
+UPDATE USERS SET BALANCE = 1000.0 WHERE ID = '2' [42000-240]
+2026-09-24 11:42:41.886104+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "[*]USERS"; expected "UPDATE"; SQL statement:
+USERS [42001-240]
+2026-09-24 12:31:05.544932+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS \000d\000a\000d\000aUPDATE [*]USERS SET BALANCE = 1000.0 WHERE ID = '2'"; SQL statement:
+SELECT * FROM USERS 
+
+UPDATE USERS SET BALANCE = 1000.0 WHERE ID = '2' [42000-240]
+2026-09-24 12:31:06.916270+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM USERS \000d\000a\000d\000aUPDATE [*]USERS SET BALANCE = 1000.0 WHERE ID = '2'"; SQL statement:
+SELECT * FROM USERS 
+
+UPDATE USERS SET BALANCE = 1000.0 WHERE ID = '2' [42000-240]
+2026-09-24 12:54:08.356941+05:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "UPDATE USERS[*]"; expected "., AS, SET"; SQL statement:
+UPDATE USERS [42001-240]
+2026-09-24 12:54:36.256427+05:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTimeoutException: Timeout trying to lock table "USERS"; SQL statement:
+select u1_0.id,u1_0.balance,u1_0.name from users u1_0 where u1_0.id=? for update [50200-240]
+2026-09-24 13:11:41.864025+05:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLTransactionRollbackException: Deadlock detected. The current transaction was rolled back. Details: "USERS"; SQL statement:
+select u1_0.id,u1_0.balance,u1_0.name from users u1_0 where u1_0.id=? for update [40001-240]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:524)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:212)
+	at org.h2.mvstore.db.MVTable.convertException(MVTable.java:705)
+	at org.h2.mvstore.db.MVTable.convertLockException(MVTable.java:695)
+	at org.h2.mvstore.db.MVPrimaryIndex.lockRow(MVPrimaryIndex.java:228)
+	at org.h2.mvstore.db.MVPrimaryIndex.lockRow(MVPrimaryIndex.java:221)
+	at org.h2.mvstore.db.MVTable.lockRow(MVTable.java:557)
+	at org.h2.command.query.Select.isConditionMetForUpdate(Select.java:421)
+	at org.h2.command.query.Select$LazyResultQueryFlat.fetchNextRow(Select.java:1868)
+	at org.h2.result.LazyResult.hasNext(LazyResult.java:78)
+	at org.h2.result.FetchedResult.next(FetchedResult.java:34)
+	at org.h2.command.query.Select.queryFlat(Select.java:749)
+	at org.h2.command.query.Select.queryWithoutCache(Select.java:873)
+	at org.h2.command.query.Query.queryWithoutCacheLazyCheck(Query.java:214)
+	at org.h2.command.query.Query.query(Query.java:529)
+	at org.h2.command.query.Query.query(Query.java:510)
+	at org.h2.command.CommandContainer.query(CommandContainer.java:222)
+	at org.h2.command.Command.executeQuery(Command.java:198)
+	at org.h2.jdbc.JdbcPreparedStatement.executeQuery(JdbcPreparedStatement.java:130)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:269)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:188)
+	at org.hibernate.sql.results.jdbc.internal.JdbcValuesResultSetImpl.<init>(JdbcValuesResultSetImpl.java:71)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValues(JdbcSelectExecutorStandardImpl.java:422)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:349)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:143)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:100)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:63)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:137)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.lambda$new$1(ConcreteSqmSelectQueryPlan.java:136)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:484)
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:411)
+	at org.hibernate.query.sqm.internal.SqmQueryImpl.doList(SqmQueryImpl.java:379)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:153)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResultOrNull(AbstractSelectionQuery.java:320)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:337)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:100)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:166)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:156)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:167)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222)
+	at jdk.proxy2/jdk.proxy2.$Proxy134.findByIdWithPessimisticLock(Unknown Source)
+	at com.yasirkhan.transactional.services.UserServiceForSerializable.readBalance(UserServiceForSerializable.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719)
+	at com.yasirkhan.transactional.services.UserServiceForSerializable$$SpringCGLIB$$0.readBalance(<generated>)
+	at com.yasirkhan.transactional.services.isolations.SerializableRead.lambda$testSerializableRead$1(SerializableRead.java:27)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: org.h2.mvstore.MVStoreException:  [2.4.240/105]
+	at org.h2.mvstore.DataUtils.newMVStoreException(DataUtils.java:996)
+	at org.h2.mvstore.tx.TxDecisionMaker$RepeatableReadLockDecisionMaker.logAndDecideToPut(TxDecisionMaker.java:378)
+	at org.h2.mvstore.tx.TxDecisionMaker.decide(TxDecisionMaker.java:80)
+	at org.h2.mvstore.tx.TxDecisionMaker$LockDecisionMaker.decide(TxDecisionMaker.java:346)
+	at org.h2.mvstore.tx.TxDecisionMaker$LockDecisionMaker.decide(TxDecisionMaker.java:338)
+	at org.h2.mvstore.MVMap$DecisionMaker.decide(MVMap.java:1689)
+	at org.h2.mvstore.MVMap.operate(MVMap.java:1763)
+	at org.h2.mvstore.tx.TransactionMap.set(TransactionMap.java:363)
+	at org.h2.mvstore.tx.TransactionMap.lock(TransactionMap.java:329)
+	at org.h2.mvstore.db.MVPrimaryIndex.lockRow(MVPrimaryIndex.java:226)
+	... 68 more
